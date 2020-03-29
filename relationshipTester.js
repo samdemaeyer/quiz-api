@@ -1,6 +1,6 @@
 const models = require('./models');
 const Question = models.Question;
-const Category = models.category;
+const Category = models.Category;
 
 Category.create({
   name: 'JavaScript'
@@ -25,7 +25,7 @@ Question.bulkCreate([
 })
 
 Category.findOne({
-  where: { name: 'JavaScript' }, include: 'company'
+  where: { name: 'JavaScript' }, include: 'questions'
 })
 .then((foundCategory) => {
   // Get the Category with Company datas included
@@ -39,7 +39,7 @@ Category.findOne({
 
 // 1:N
 // Get the employees for a given company
-Category.findByPk(1, { include: ['employes'] })
+Category.findByPk(1)
 .then((category) => {
   // Get the Category with Users (employes) datas included
   console.log(category)
