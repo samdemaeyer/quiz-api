@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+sequelize db:drop || echo "====== ☝️☝️☝️ no need to drop db if it does not extis ☝️☝️☝️ ======"
+
+sequelize db:create && sequelize db:migrate && sequelize db:seed:undo:all && sequelize db:seed:all

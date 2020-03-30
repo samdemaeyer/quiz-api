@@ -1,11 +1,15 @@
 # quiz-api
 
-### Create DB
+### Setup project
 ```bash
-$ sequelize db:create
+$ yarn setup
 ```
 
-### Migrate DB
+### Run server
 ```bash
-$ sequelize db:migrate
+$ yarn start
 ```
+The server runs on port `3001`, visit <a href="http://localhost:3001/categories" target="_blank">http://localhost:3001/categories</a>
+
+### Endpoints
+- `categories`: <a href="http://localhost:3001/categories" target="_blank">http://localhost:3001/categories</a>
