@@ -1,5 +1,7 @@
 'use strict';
 
+const codeBlocks = require('../assets/codeBlocks')
+
 module.exports = {
   up: async (queryInterface) => {
     await queryInterface.bulkInsert('Categories', [
@@ -18,7 +20,8 @@ module.exports = {
     return await queryInterface.bulkInsert('questions', [
       {
         title: 'First question',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'In the following code block, what resetObjectValues() return?',
+        codeBlock: codeBlocks[0],
         categoryId: categories[0][0].id,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -26,6 +29,7 @@ module.exports = {
       {
         title: 'Second question',
         description: 'Aliquam quis iaculis est, non interdum augue.',
+        codeBlock: codeBlocks[1],
         categoryId: categories[0][0].id,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -33,6 +37,7 @@ module.exports = {
       {
         title: 'Third question',
         description: 'Nam eleifend erat a facilisis molestie.',
+        codeBlock: codeBlocks[2],
         categoryId:  categories[0][0].id,
         createdAt: new Date(),
         updatedAt: new Date()
