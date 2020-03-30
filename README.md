@@ -9,7 +9,7 @@ $ yarn setup
 ```bash
 $ yarn start
 ```
-The server runs on port `3001`, visit <a href="http://localhost:3001/categories" target="_blank">http://localhost:3001/categories</a>
+The server runs on port `3001`, visit [http://localhost:3001](http://localhost:3001)
 
 ### Endpoints
-- `categories`: <a href="http://localhost:3001/categories" target="_blank">http://localhost:3001/categories</a>
+- `categories`: [http://localhost:3001/categories](http://localhost:3001/categories)
