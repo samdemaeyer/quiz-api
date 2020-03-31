@@ -1,19 +1,19 @@
-var express = require('express');
-var router = express.Router();
-const models = require('../models');
+const express = require('express')
+const router = express.Router()
+const models = require('../models')
 
-const Category = models.Category;
+const Category = models.Category
 
 /* GET categories listing. */
-router.get('/', async function(req, res) {
-  const cat = await Category.findAll(req.query);
-  res.send(cat);
-});
+router.get('/', async({ query }, res) => {
+  const category = await Category.findAll(query)
+  res.send(category)
+})
 
 /* GET category. */
-router.get('/:id', async function({ params, query }, res) {
-  const cat = await Category.findOne({ id: params, ...query });
-  res.send(cat);
-});
+router.get('/:id', async({ params, query }, res) => {
+  const category = await Category.findOne({ id: params, ...query })
+  res.send(category)
+})
 
-module.exports = router;
+module.exports = router

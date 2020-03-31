@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const Category = sequelize.define('Category', {
-    name: DataTypes.STRING
-  }, {});
+    name: DataTypes.STRING,
+  }, {})
   Category.associate = function(models) {
-    Category.hasMany(models.Question, {as: 'questions'})
-  };
-  return Category;
-};
+    Category.hasMany(models.Question, { as: 'questions' })
+  }
+  return Category
+}

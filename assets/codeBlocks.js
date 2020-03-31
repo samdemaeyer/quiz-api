@@ -1,5 +1,5 @@
 module.exports = [
-`
+  `
 const obj = {
   foo: 'bar'
 }
@@ -12,13 +12,13 @@ function resetObjectValues (obj) {
 
 resetObjectValues(obj);
 `,
-`
+  `
 function addNumbers(a, b) {
   return a + b;
 }
 `,
-`
+  `
 const myBool = false;
 const result = myBook ? 'Yes' : 'No';
-`
+`,
 ]
