@@ -21,4 +21,13 @@ function addNumbers(a, b) {
 const myBool = false;
 const result = myBook ? 'Yes' : 'No';
 `,
+  `
+span.title {
+  text-transform: lowercase;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+`,
 ]
